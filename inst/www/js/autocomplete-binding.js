@@ -52,7 +52,7 @@ $.extend(autocompleteBinding, {
   },
 
   receiveMessage: function (el, data) {
-    if (data.hasOwnProperty("value")) this.setValue(el, data.value);
+    if (data.hasOwnProperty("value")) el.value = data.value;
     if (data.hasOwnProperty("placeholder")) el.placeholder = data.placeholder;
     if (data.hasOwnProperty("label"))
       $(el)
